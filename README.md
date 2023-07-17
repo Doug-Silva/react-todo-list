@@ -24,7 +24,28 @@
 
 ## 🚀 Iniciar
 
-Para iniciar o projeto, basta abrir o arquivo "index.html" em seu navegador preferido.
+⚙ Baixar e Instalar Node.js
+
+- [Node.js](https://nodejs.org/en)
+
+##
+
+🡇 Comando no terminal para clonar o repositório
+
+    git clone https://github.com/Doug-Silva/react-todo-list.git
+
+##
+
+🡇 Comando no terminal para executar o projeto
+
+    npm start
+
+##
+
+💻 Desenvolva o projeto na sua IDE de preferência
+
+- [Visual Studio Code](https://code.visualstudio.com/download)
+- [WebStorm](https://www.jetbrains.com/webstorm)
 
 ## 🔨 Seja um dos contribuidores<br>
 
