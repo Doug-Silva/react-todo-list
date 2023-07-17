@@ -12,7 +12,7 @@
   </p>
 
   <div>
-    <a href="https://github.com/Doug-Silva/my-todo-list/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/react"
+    <a href="https://github.com/Doug-Silva/react-todo-list/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/react"
     alt="License MIT"></a>
   </div><br>
 
