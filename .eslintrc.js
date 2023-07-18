@@ -23,6 +23,7 @@ module.exports = {
   plugins: ['react', 'react-hooks', 'testing-library', 'prettier'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'no-console': 'off',
     'prettier/prettier': 'warn',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
     'import/prefer-default-export': 'off',
