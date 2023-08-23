@@ -8,14 +8,7 @@ const App = () => {
   // tecla Esc
   const ESCAPE_KEY = 27;
 
-  const initialTodos = [
-    { id: 1, title: 'Estudar React', checked: false },
-    { id: 2, title: 'Estudar Inglês', checked: true },
-    { id: 3, title: 'Tocar guitarra', checked: false },
-    { id: 4, title: 'Aprender Python', checked: false },
-  ];
-
-  const [todos] = useState(initialTodos);
+  const [todos, setTodos] = useState([]);
   const [value, setValue] = useState('');
 
   // função para apagar com a tecla Esc
@@ -25,7 +18,16 @@ const App = () => {
 
   // função enviar (aparece no console.log)
   const submit = () => {
-    console.log('submit', value);
+    setTodos([
+      ...todos,
+      {
+        id: new Date().getTime(),
+        title: value,
+        checked: false,
+      },
+    ]);
+
+    erase();
   };
 
   const onChange = (event) => {
