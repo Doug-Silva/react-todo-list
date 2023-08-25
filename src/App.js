@@ -55,6 +55,10 @@ const App = () => {
     );
   };
 
+  const onRemove = (todo) => {
+    console.log('remove', todo);
+  };
+
   return (
     <section id="app" className="container">
       <header>
@@ -81,7 +85,11 @@ const App = () => {
               >
                 {todo.title}
               </span>
-              <button className="remove" type="button">
+              <button
+                className="remove"
+                type="button"
+                onClick={() => onRemove(todo)}
+              >
                 <MdDelete size={28} />
               </button>
             </li>
