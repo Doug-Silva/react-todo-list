@@ -56,7 +56,7 @@ const App = () => {
   };
 
   const onRemove = (todo) => {
-    console.log('remove', todo);
+    setTodos(todos.filter((obj) => obj.id !== todo.id));
   };
 
   return (
