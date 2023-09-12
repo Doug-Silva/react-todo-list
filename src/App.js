@@ -1,23 +1,11 @@
 import { useState } from 'react';
 import { MdDelete } from 'react-icons/md';
-import './App.css';
+import NewTodo from './components/NewTodo';
 
 const App = () => {
-  // tecla Enter
-  const ENTER_KEY = 13;
-  // tecla Esc
-  const ESCAPE_KEY = 27;
-
   const [todos, setTodos] = useState([]);
-  const [value, setValue] = useState('');
 
-  // função para apagar com a tecla Esc
-  const erase = () => {
-    setValue('');
-  };
-
-  // função enviar (aparece no console.log)
-  const submit = () => {
+  const onNewTodo = (value) => {
     setTodos([
       ...todos,
       {
@@ -26,25 +14,6 @@ const App = () => {
         checked: false,
       },
     ]);
-
-    erase();
-  };
-
-  const onChange = (event) => {
-    setValue(event.target.value);
-  };
-
-  // função de tecla Enter pressionada ou tecla Esc
-  const onKeyDown = (event) => {
-    // se for pressionada a tecla Enter
-    if (event.which === ENTER_KEY) {
-      submit();
-      erase();
-
-      // se for pressionada a tecla Esc
-    } else if (event.which === ESCAPE_KEY) {
-      erase();
-    }
   };
 
   const onToggle = (todo) => {
@@ -66,13 +35,7 @@ const App = () => {
       </header>
 
       <section className="main">
-        <input
-          className="new-todo"
-          placeholder="o que precisa ser feito?"
-          value={value}
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-        />
+        <NewTodo onNewTodo={onNewTodo} />
         <ul className="todo-list">
           {todos.map((todo) => (
             <li key={todo.id.toString()}>
