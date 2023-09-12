@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const NewTodo = ({ onNewTodo }) => {
   const ENTER_KEY = 13;
@@ -45,6 +46,10 @@ const NewTodo = ({ onNewTodo }) => {
       onKeyDown={onKeyDown}
     />
   );
+};
+
+NewTodo.propTypes = {
+  onNewTodo: PropTypes.func.isRequired,
 };
 
 export default NewTodo;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MdDelete } from 'react-icons/md';
 import NewTodo from './components/NewTodo';
+import './App.css';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
